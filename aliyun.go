@@ -75,12 +75,14 @@ func (aliyun *Aliyun) setToken() (err error) {
 	return
 }
 
-func (aliyun *Aliyun) prepare() (err error) {
+// Prepare ...
+func (aliyun *Aliyun) Prepare() (err error) {
 	err = aliyun.setToken()
 	return
 }
 
-func (aliyun *Aliyun) recognize(filename string) (text string, err error) {
+// Recognize ...
+func (aliyun *Aliyun) Recognize(filename string) (text string, err error) {
 	url := "http://nls-gateway.cn-shanghai.aliyuncs.com/stream/v1/asr"
 	url = fmt.Sprintf("%s?appkey=%s&format=%s&sample_rate=%d", url, aliyun.AppID, aliyun.Format, aliyun.SampleRate)
 	audioData, err := ioutil.ReadFile(filename)

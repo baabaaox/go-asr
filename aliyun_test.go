@@ -25,11 +25,11 @@ func TestAliyunRecognize(t *testing.T) {
 			SampleRate:      16000,
 		},
 	}
-	err := asrEngine.prepare()
+	err := asrEngine.Prepare()
 	if err != nil {
 		t.Error(err)
 	}
-	text, err := asrEngine.recognize("test.pcm")
+	text, err := asrEngine.Recognize("test.pcm")
 	if err != nil {
 		t.Error(err)
 	}

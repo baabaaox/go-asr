@@ -22,7 +22,7 @@ func TestTencentRecognize(t *testing.T) {
 			Lang:      "16k_zh",
 		},
 	}
-	text, err := asrEngine.recognize("test.wav")
+	text, err := asrEngine.Recognize("test.wav")
 	if err != nil {
 		t.Error(err)
 	}

@@ -20,11 +20,13 @@ type (
 	}
 )
 
-func (google *Google) prepare() (err error) {
+// Prepare ...
+func (google *Google) Prepare() (err error) {
 	return
 }
 
-func (google *Google) recognize(filename string) (text string, err error) {
+// Recognize ...
+func (google *Google) Recognize(filename string) (text string, err error) {
 	url := "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=" + google.APIKey
 	audioData, err := ioutil.ReadFile(filename)
 	if err != nil {

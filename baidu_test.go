@@ -21,11 +21,11 @@ func TestBaiduRecognize(t *testing.T) {
 			Format:       "wav",
 		},
 	}
-	err := asrEngine.prepare()
+	err := asrEngine.Prepare()
 	if err != nil {
 		t.Error(err)
 	}
-	text, err := asrEngine.recognize("test.wav")
+	text, err := asrEngine.Recognize("test.wav")
 	if err != nil {
 		t.Error(err)
 	}

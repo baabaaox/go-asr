@@ -37,11 +37,13 @@ func hmacsha256(s, key string) string {
 	return string(hashed.Sum(nil))
 }
 
-func (tencent *Tencent) prepare() (err error) {
+// Prepare ...
+func (tencent *Tencent) Prepare() (err error) {
 	return
 }
 
-func (tencent Tencent) recognize(filename string) (text string, err error) {
+// Recognize ...
+func (tencent Tencent) Recognize(filename string) (text string, err error) {
 	host := "asr.tencentcloudapi.com"
 	algorithm := "TC3-HMAC-SHA256"
 	service := "asr"

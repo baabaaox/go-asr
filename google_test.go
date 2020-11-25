@@ -20,7 +20,7 @@ func TestGoogleRecognize(t *testing.T) {
 			Lang:       "zh",
 		},
 	}
-	text, err := asrEngine.recognize("test.pcm")
+	text, err := asrEngine.Recognize("test.pcm")
 	if err != nil {
 		t.Error(err)
 	}

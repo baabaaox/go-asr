@@ -47,12 +47,14 @@ func (baidu *Baidu) setToken() (err error) {
 	return
 }
 
-func (baidu *Baidu) prepare() (err error) {
+// Prepare ...
+func (baidu *Baidu) Prepare() (err error) {
 	err = baidu.setToken()
 	return
 }
 
-func (baidu *Baidu) recognize(filename string) (text string, err error) {
+// Recognize ...
+func (baidu *Baidu) Recognize(filename string) (text string, err error) {
 	url := "https://vop.baidu.com/pro_api"
 	audioData, err := ioutil.ReadFile(filename)
 	if err != nil {
